@@ -1,5 +1,6 @@
+
 <%= form_for @job do |f| %>
-  <h1><%= f.label :title, "Título" %></h1>
+  <%= f.label :title, "Título" %>
   <%= f.text_field :title %>
   <%= f.label :location, "Local" %>
   <%= f.text_field :location %>
@@ -12,4 +13,5 @@
   <%= f.label(:featured, "Destaque") %>
   <%= f.check_box(:featured) %>
   <%= f.submit "Criar Vaga" %>
+
 <% end %>
