@@ -2,3 +2,13 @@
 <p><%= @company.location %></p>
 <p><%= @company.mail %></p>
 <p><%= @company.phone %></p>
+
+  <% @company.jobs.each do |job| %>
+    <h1> <%= link_to job.title, job %> </h1>
+    <p><%= job.location %></p>
+    <p><%= job.category %></p>
+  <% end %>
+
+  <% if @company.jobs.empty? %>
+    <p>Nenhuma vaga disponível</p>
+  <% end %>
