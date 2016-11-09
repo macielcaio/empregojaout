@@ -6,7 +6,7 @@
   <% @company.jobs.each do |job| %>
     <h1> <%= link_to job.title, job %> </h1>
     <p><%= job.location %></p>
-    <p><%= job.category %></p>
+    <p><%= job.category.name %></p>
   <% end %>
 
   <% if @company.jobs.empty? %>
