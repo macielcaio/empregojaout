@@ -17,4 +17,10 @@ class CompaniesController < ApplicationController
       params.require(:company).permit(:name, :location, :mail, :phone)
     end
 
+    def premium
+      if @jobs.lenght >= 5
+      
+      end
+    end
+
 end
