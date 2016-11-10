@@ -12,3 +12,7 @@
   <% if @company.jobs.empty? %>
     <p>Nenhuma vaga disponível</p>
   <% end %>
+
+  <% if @company.premium? %>
+    <%= image_tag 'estrela.png' %>
+  <% end %>
